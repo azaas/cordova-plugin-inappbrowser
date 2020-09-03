@@ -1055,12 +1055,13 @@ public class InAppBrowser extends CordovaPlugin {
 
                 // Add the views to our toolbar if they haven't been disabled
                 if (!hideNavigationButtons) toolbar.addView(actionButtonContainer);
-                if (!hideUrlBar) toolbar.addView(edittext);
+                if (!hideUrlBar)  main.addView(toolbar);
 
                 // Don't add the toolbar if its been disabled
                 if (getShowLocationBar()) {
                     // Add our toolbar to our main view/layout
-                    main.addView(toolbar);
+                    //main.addView(toolbar);
+                    toolbar.addView(edittext);
                 }
 
                 // Add our webview to our main view/layout
